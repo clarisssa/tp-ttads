@@ -5,8 +5,9 @@ Trabajo: 1
 Año de cursado: 2017
 Fecha de entrega final: TBD
 
-Integrantes 
+Integrantes
+------------
 
 41923, Paro Clarissa.
 41982, Calvo Isaias.
-41929, Alvarez Cecilia. 
+41929, Alvarez Cecilia.

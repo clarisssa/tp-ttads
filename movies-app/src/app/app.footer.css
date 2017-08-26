@@ -1,0 +1,32 @@
+section.footer {
+   /* background-image: url("../images/Alien.jpg");*/
+}
+.mapa{
+	padding: 10px 10px 10px 10px;
+	float: left;
+}
+.mapa ul{
+   margin : 0px 0px 0px 5px;
+   padding: 5px 5px 5px 5px;
+   list-style:none;
+}
+a,p{
+	 color: black;
+}
+.mapa a {
+    font-weight: bold;
+}
+.mapa ul li a{
+    color: black;
+    font-weight: normal;
+}
+.mapa a:hover{
+	 text-decoration: none;
+}
+.mapa a:focus{
+    text-decoration: none;
+}
+
+img {
+    width: 150px;
+}

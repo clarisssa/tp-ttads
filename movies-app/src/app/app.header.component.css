@@ -1,10 +1,15 @@
+div.header{
+    background: #000000;
+}
+
+div.navbar{
+    border-color: black; 
+}
 ul.fullnav {
     list-style: none; 
     width: 100%; 
     margin: 0; 
-    border: 0; 
-   /* font-size: 0; 
-    text-align: center;*/
+    border: 0;
 }
 
 ul.fullnav {
@@ -36,8 +41,4 @@ fullnav{
 .navbar-collapse {
     padding-left: 0;
     padding-right: 0;
-}
-
-section.header {
-    background: #000000;
 }

@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-body',
-  templateUrl: './app.body.html',
-  styleUrls: ['./app.body.css']
+  templateUrl: './app.body.component.html',
+  styleUrls: ['./app.body.component.css']
 })
 
 export class AppBodyComponent {

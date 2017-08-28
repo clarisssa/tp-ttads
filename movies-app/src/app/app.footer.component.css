@@ -8,13 +8,13 @@
    list-style:none;
 }
 a,p{
-	 color: black;
+	 color: white;
 }
 .mapa a {
     font-weight: bold;
 }
 .mapa ul li a{
-    color: black;
+    color: white;
     font-weight: normal;
 }
 .mapa a:hover{

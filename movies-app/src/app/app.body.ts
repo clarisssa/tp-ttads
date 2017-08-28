@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.body.css']
 })
 
-export class AppBody {
+export class AppBodyComponent {
   title = 'appbody';
 }

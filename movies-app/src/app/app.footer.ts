@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.footer.css']
 })
 
-export class AppFooter {
+export class AppFooterComponent {
   title = 'appfooter';
 }

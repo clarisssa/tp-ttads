@@ -2,16 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { AppHeader } from './app.header';
-import { AppFooter } from './app.footer';
-import { AppBody } from './app.body';
+import { AppHeaderComponent } from './app.header';
+import { AppFooterComponent } from './app.footer';
+import { AppBodyComponent } from './app.body';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppHeader,
-    AppFooter,
-    AppBody
+    AppHeaderComponent,
+    AppFooterComponent,
+    AppBodyComponent
   ],
   imports: [
     BrowserModule

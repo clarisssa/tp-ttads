@@ -1,7 +1,8 @@
 div.header{
     background: #000000;
 }
-
+div#menu {float: right;}
+div.logo{float: left;}
 div.navbar{
     border-color: black; 
 }

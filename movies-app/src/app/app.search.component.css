@@ -1,6 +1,12 @@
 app-search {
-    margin: 10px;    
+    margin: 10px;
+    width: 100%;    
 }
 input, button{
  height: 50px;
+ width: 100%;    
+}
+div#search{
+ clear: both;
+ background: black;
 }

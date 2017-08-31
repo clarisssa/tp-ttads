@@ -11,11 +11,14 @@ import 'rxjs/add/operator/map';
 })
 
 export class MovieComponent {
+
   public title;
   public poster ;
   public overview ;
   public vote_average ;
   public id ;
+  public poster_path;
+  public release_date: Date;
 
   constructor(http: Http) {
     let mds = new MovieDataService(http);

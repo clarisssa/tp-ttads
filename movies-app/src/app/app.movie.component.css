@@ -1,8 +1,30 @@
 section.movie {
     border-style: solid;
     background-color: #FFFFFF;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: monospace;
 }
 
 p {
-    text-align: right;
+    text-align: justify;
+    font-size: 12px;
+}
+
+img{
+    margin-bottom: 10px;
+}
+
+h3{
+    text-align: center;
+}
+
+span{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button span{
+    color: orangered;
 }

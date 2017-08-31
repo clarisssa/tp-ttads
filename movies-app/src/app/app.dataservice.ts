@@ -20,10 +20,15 @@ export class MovieDataService {
 
     this.http.get('http://localhost:9000/api/movies/info/' + id)
       .map(res => res.json())
-      .subscribe(movie => {oneMovie.title = movie.title;
-                           oneMovie.overview = movie.overview;
+      .subscribe(movie => {
+                            oneMovie.title = movie.title;
+                            oneMovie.overview = movie.overview;
                             oneMovie.poster = movie.poster;
-                            oneMovie.vote_average = movie.vote_average; });
+                            oneMovie.vote_average = movie.vote_average;
+                            oneMovie.poster_path = movie.poster_path;
+                            oneMovie.release_date = movie.release_date;
+                          }
+                );
       return oneMovie;
     }
 

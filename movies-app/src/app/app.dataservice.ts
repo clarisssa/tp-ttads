@@ -2,21 +2,31 @@ import {Component} from '@angular/core';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 import { MovieComponent } from './app.movie.component';
+import { Observable } from 'rxjs/Observable';
 
 export class MovieDataService {
 
-  /*constructor(http: Http) {}
+   constructor(public http: Http) {}
 
-    listmovies: MovieComponent[] = [];
-
-    getAllMovies(): MovieComponent[] {
-        return this.listmovies;
+   getAllMovies(http: Http): MovieComponent[] {
+    let listMovies: MovieComponent[];
+    http.get('http://localhost:9000/api/movies/')
+      .map(res => res.json())
+      .subscribe(movie => listMovies = movie.title);
+      return listMovies;
     }
 
-    getOneMovie(id: number): MovieComponent {
-        return this.listmovies
-            .filter(movie => movie.id === id)
-            .pop();
-    }*/
+    getOneMovie(id: number , oneMovie: MovieComponent): MovieComponent {
 
-}
+    this.http.get('http://localhost:9000/api/movies/info/' + id)
+      .map(res => res.json())
+      .subscribe(movie => {oneMovie.title = movie.title;
+                           oneMovie.overview = movie.overview;
+                            oneMovie.poster = movie.poster;
+                            oneMovie.vote_average = movie.vote_average; });
+      return oneMovie;
+    }
+
+   }
+
+

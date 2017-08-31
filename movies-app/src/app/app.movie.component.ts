@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Http } from '@angular/http';
+import { MovieDataService } from './app.dataservice';
 import 'rxjs/add/operator/map';
 
 @Component({
@@ -10,25 +11,18 @@ import 'rxjs/add/operator/map';
 })
 
 export class MovieComponent {
-  public title: string;
-  private poster ;
-  private overview ;
-  private vote_average ;
-  private id ;
+
+  public title;
+  public poster ;
+  public overview ;
+  public vote_average ;
+  public id ;
   private poster_path;
   private release_date: Date;
 
   constructor(http: Http) {
-    http.get('http://localhost:9000/api/movies/info/278')
-      .map(res => res.json())
-      .subscribe(movie => {
-                            this.title = movie.title;
-                            this.id = movie.id;
-                            this.overview = movie.overview;
-                            this.vote_average = movie.vote_average;
-                            this.poster_path = movie.poster_path;
-                            this.release_date = movie.release_date;
-                          }
-                );
+    let mds = new MovieDataService(http);
+    let oneMovie: MovieComponent;
+    oneMovie = mds.getOneMovie(278, this);
    }
 }

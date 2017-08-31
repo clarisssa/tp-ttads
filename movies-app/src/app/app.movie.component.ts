@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-movie',
@@ -7,9 +10,15 @@ import { Component } from '@angular/core';
 })
 
 export class MovieComponent {
-  title = 'TITULO DE LA PELI';
-  poster = 'IMAGEN PRINCIPAL.jpg';
-  overview = 'OVERVIEW' ;
-  score = 'PUNTUACIÓN';
-  id = 1;
+  public title: string;
+  private poster ;
+  private overview ;
+  private score ;
+  private id ;
+
+  constructor(http: Http) {
+    http.get('http://localhost:9000/api/movies/info/278')
+      .map(res => res.json())
+      .subscribe(movie => this.title = movie.title);
+   }
 }

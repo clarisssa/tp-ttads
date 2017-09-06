@@ -22,7 +22,6 @@ export class MovieComponent {
 
   constructor(http: Http) {
     let mds = new MovieDataService(http);
-    let oneMovie: MovieComponent;
-    oneMovie = mds.getOneMovie(278, this);
+    mds.getOneMovie(278, this);
    }
 }

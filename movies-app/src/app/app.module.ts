@@ -8,6 +8,7 @@ import { AppBodyComponent } from './app.body.component';
 import { MovieComponent } from './app.movie.component';
 import { SearchComponent } from './app.search.component';
 import { MovieDataService } from './app.dataservice';
+import { ListMoviesComponent} from './app.listmovies.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MovieDataService } from './app.dataservice';
     AppFooterComponent,
     AppBodyComponent,
     MovieComponent,
-    SearchComponent
+    SearchComponent,
+    ListMoviesComponent
   ],
   imports: [
     BrowserModule,

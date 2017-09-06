@@ -3,21 +3,19 @@ import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 import { MovieComponent } from './app.movie.component';
 import { Observable } from 'rxjs/Observable';
+import {ListMoviesComponent} from './app.listmovies.component';
 
 export class MovieDataService {
 
    constructor(public http: Http) {}
 
-   getAllMovies(http: Http): MovieComponent[] {
-    let listMovies: MovieComponent[];
-    http.get('http://localhost:9000/api/movies/')
-      .map(res => res.json())
-      .subscribe(movie => listMovies = movie.title);
-      return listMovies;
+   getAllMovies(): Observable<any> {
+    let listMovies: any;
+    listMovies = this.http.get('http://localhost:9000/api/movies').map(res => res.json());
+    return listMovies;
     }
 
     getOneMovie(id: number , oneMovie: MovieComponent): MovieComponent {
-
     this.http.get('http://localhost:9000/api/movies/info/' + id)
       .map(res => res.json())
       .subscribe(movie => {
@@ -30,6 +28,13 @@ export class MovieDataService {
                           }
                 );
       return oneMovie;
+    }
+
+    searchMovies(texto: string , listMovies: MovieComponent[]): MovieComponent[] {
+    this.http.get('http://localhost:9000/api/movies/search/' + texto)
+      .map(res => res.json())
+      .subscribe(movie => listMovies = movie.title);
+      return listMovies;
     }
 
    }

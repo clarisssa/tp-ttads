@@ -12,11 +12,13 @@ import 'rxjs/add/operator/map';
 })
 
 export class SearchComponent {
- @Input() texto: string;
+  public obs: Observable<any>;
+  public listMovies: MovieComponent[] ;
+  @Input() texto: string;
 
 searchMovie(http: Http) {
-    let mds = new MovieDataService(http);
-    let listMovie: MovieComponent[];
-    mds.searchMovies(this.texto, listMovie);
+    const mds = new MovieDataService(http);
+    this.obs = mds.searchMovies(this.texto);
+    this.obs.subscribe(response => this.listMovies = response.results);
    }
 }

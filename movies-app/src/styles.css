@@ -13,4 +13,10 @@
 
 app-header { background: black;}
 
+app-body.col-md-12, app-header.col-md-12{
+    padding: 0px;
+}
+
+
+
 

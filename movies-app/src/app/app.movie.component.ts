@@ -20,8 +20,8 @@ export class MovieComponent {
   public poster_path;
   public release_date: Date;
 
-  constructor(http: Http) {
+  constructor(http: Http, id: number) {
     let mds = new MovieDataService(http);
-    mds.getOneMovie(278, this);
+    mds.getOneMovie(id, this);
    }
 }

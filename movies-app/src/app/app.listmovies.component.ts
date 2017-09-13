@@ -18,11 +18,7 @@ export class ListMoviesComponent {
   public obs: Observable<any>;
   public selectedMovie: MovieComponent;
 
-<<<<<<< HEAD
   constructor(http: Http, private router: Router) {
-=======
-  constructor(http: Http) {
->>>>>>> 2e7d9265635275149b55beb3fccca2823f424066
     const mds = new MovieDataService(http);
     this.obs = mds.getAllMovies();
     this.obs.subscribe(response => this.listMovies = response.results);

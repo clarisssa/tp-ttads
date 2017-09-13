@@ -30,10 +30,15 @@ export class MovieDataService {
       return oneMovie;
     }
 
-    searchMovies(texto: string , listMovies: MovieComponent[]): MovieComponent[] {
-    this.http.get('http://localhost:9000/api/movies/search/' + texto)
-      .map(res => res.json())
-      .subscribe(movie => listMovies = movie.title);
+    searchMovies(texto: string): Observable<any> {
+      let listMovies: any;
+      listMovies = this.http.get('http://localhost:9000/api/movies/search/' + texto).map(res => res.json());
+      return listMovies;
+    }
+
+    topMovies(): Observable<any> {
+      let listMovies: any;
+      listMovies = this.http.get('http://localhost:9000/api/movie/playing').map(res => res.json());
       return listMovies;
     }
 

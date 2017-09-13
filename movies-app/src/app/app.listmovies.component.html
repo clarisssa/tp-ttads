@@ -1,6 +1,6 @@
 <ul>
     <li *ngFor="let movie of listMovies">
-      <section class="col-md-5 col-lg-5 movie">
+      <section class="col-md-5 col-lg-5 movie" id="movie">
         <h3>{{movie.title}}</h3>
         <img class="col-md-6 col-lg-6" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{movie.poster_path}}" alt="poster"/>
         <p>{{movie.overview}}</p>

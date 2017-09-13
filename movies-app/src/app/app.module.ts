@@ -9,6 +9,8 @@ import { MovieComponent } from './app.movie.component';
 import { SearchComponent } from './app.search.component';
 import { MovieDataService } from './app.dataservice';
 import { ListMoviesComponent} from './app.listmovies.component';
+import { PageNotFoundComponent } from './app.pagenotfound.component';
+import { routing } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,16 @@ import { ListMoviesComponent} from './app.listmovies.component';
     AppBodyComponent,
     MovieComponent,
     SearchComponent,
-    ListMoviesComponent
+    ListMoviesComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

@@ -1,9 +1,14 @@
 <ul>
     <li *ngFor="let movie of listMovies">
+<<<<<<< HEAD
       <section class="col-md-5 col-lg-5 movie">
         <h3>
             <a [routerLink]="['/app-movie', movie.id]" routerLinkActive="active">{{movie.title}}</a>
         </h3>
+=======
+      <section class="col-md-5 col-lg-5 movie" id="movie">
+        <h3>{{movie.title}}</h3>
+>>>>>>> c1517a5b13a7e249be5525e566f302ca5c7377ec
         <img class="col-md-6 col-lg-6" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{movie.poster_path}}" alt="poster"/>
         <p>{{movie.overview}}</p>
         <span>{{release_date}}</span>

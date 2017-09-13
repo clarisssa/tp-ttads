@@ -2,3 +2,13 @@ section.body {
     background-color: #383737;
 }
 h1, h2{ text-align: center;}
+
+div#movie{
+    background-image: url("../assets/images/backmovie.jpg");
+    height: 188px;
+    padding-top: 20px;
+    width: 100%;
+}
+h1, h2 { color: black;
+font-weight: bold;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }

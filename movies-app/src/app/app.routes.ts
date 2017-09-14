@@ -12,11 +12,9 @@ export const routes: Routes = [
       component: ListMoviesComponent,
     },
     { path: 'movie/:id',
-      component: MovieComponent,
-    //  redirectTo: 'movie/:id',
-    //  pathMatch: 'full',
+      component: MovieComponent
     },
-     { path: '**', component: PageNotFoundComponent }
+    { path: '**', component: PageNotFoundComponent }
 ];
 
 export const routing = RouterModule.forRoot(routes);

@@ -1,9 +1,9 @@
-import { Component,Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Http } from '@angular/http';
 import { MovieDataService } from './app.dataservice';
 import { MovieComponent} from './app.movie.component';
-import 'rxjs/add/operator/map';
+// import 'rxjs/add/operator/map';
 import { NgModel } from '@angular/forms';
 
 @Component({
@@ -13,13 +13,15 @@ import { NgModel } from '@angular/forms';
 })
 
 export class SearchComponent {
+
   public obs: Observable<any>;
   public listMovies: MovieComponent[] ;
   @Input() texto: string;
 
-searchMovie(http: Http) {
-    const mds = new MovieDataService(http);
-    this.obs = mds.searchMovies(this.texto);
+  constructor(http: Http, private mds: MovieDataService) { }
+
+  searchMovie(): void {
+    this.obs = this.mds.searchMovies(this.texto);
     this.obs.subscribe(response => this.listMovies = response.results);
    }
 }

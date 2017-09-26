@@ -20,12 +20,9 @@ export class MovieComponent implements OnInit {
   public id ;
   public poster_path;
   public release_date: Date;
-  public mds;
   private sub: any;
 
-  constructor(http: Http, private route: ActivatedRoute) {
-    this.mds = new MovieDataService(http);
-  }
+  constructor(http: Http, private route: ActivatedRoute, private mds: MovieDataService) { }
 
    ngOnInit() {
     this.sub = this.route.params.subscribe(params => {

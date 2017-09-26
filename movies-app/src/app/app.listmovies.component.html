@@ -1,8 +1,7 @@
 <ul>
     <li *ngFor="let movie of listMovies">
-      <section class="col-md-5 col-lg-5 movie">
+      <div class="col-md-4 col-lg-4 fila">
         <h3>
-            <!--<a [routerLink]="['/app-movie', movie.id]" routerLinkActive="active">{{movie.title}}</a>-->
             <a [routerLink]="['/movie', movie.id]" routerLinkActive="active">{{movie.title}}</a>
         </h3>
         <img class="col-md-6 col-lg-6" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{movie.poster_path}}" alt="poster"/>
@@ -12,6 +11,6 @@
         <span class="glyphicon glyphicon-star" aria-hidden="false"></span>
         <span>{{movie.vote_average}}</span>
         </button>
-    </section>
+    </div>
    </li>
 </ul>

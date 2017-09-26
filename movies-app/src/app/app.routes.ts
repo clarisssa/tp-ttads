@@ -2,6 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MovieComponent } from './app.movie.component';
 import { ListMoviesComponent } from './app.listmovies.component';
 import { PageNotFoundComponent } from './app.pagenotfound.component';
+import { SearchComponent } from './app.search.component';
 
 export const routes: Routes = [
     { path: '',
@@ -14,7 +15,12 @@ export const routes: Routes = [
     { path: 'movie/:id',
       component: MovieComponent
     },
-    { path: '**', component: PageNotFoundComponent }
+    { path: 'list-search',
+    component: ListMoviesComponent,
+    },
+    { path: '**',
+    component: PageNotFoundComponent
+    }
 ];
 
 export const routing = RouterModule.forRoot(routes);

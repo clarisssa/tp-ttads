@@ -4,6 +4,7 @@ import { Http } from '@angular/http';
 import { MovieDataService } from './app.dataservice';
 import { MovieComponent} from './app.movie.component';
 import 'rxjs/add/operator/map';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-search',

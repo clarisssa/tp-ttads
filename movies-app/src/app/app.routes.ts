@@ -3,8 +3,9 @@ import { MovieComponent } from './app.movie.component';
 import { ListMoviesComponent } from './app.listmovies.component';
 import { PageNotFoundComponent } from './app.pagenotfound.component';
 import { SearchComponent } from './app.search.component';
+import { NgModule } from '@angular/core';
 
-export const routes: Routes = [
+const routes: Routes = [
     { path: '',
       redirectTo: 'movie-list',
       pathMatch: 'full'
@@ -23,4 +24,8 @@ export const routes: Routes = [
     }
 ];
 
-export const routing = RouterModule.forRoot(routes);
+@NgModule({
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ]
+})
+export class AppRoutingModule {}

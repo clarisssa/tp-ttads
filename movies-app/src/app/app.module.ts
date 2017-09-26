@@ -10,7 +10,7 @@ import { SearchComponent } from './app.search.component';
 import { MovieDataService } from './app.dataservice';
 import { ListMoviesComponent} from './app.listmovies.component';
 import { PageNotFoundComponent } from './app.pagenotfound.component';
-import { routing } from './app.routes';
+import { AppRoutingModule} from './app.routes';
 import { NgModel } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 
@@ -29,7 +29,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     HttpModule,
-    routing
+    AppRoutingModule
   ],
   providers: [MovieDataService],
   bootstrap: [AppComponent]

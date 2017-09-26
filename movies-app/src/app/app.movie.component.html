@@ -1,10 +1,18 @@
-<section class="col-md-5 col-lg-5 movie">
+<section class="col-md-12 col-lg-12 movie">
     <h3>{{title}}</h3>
-    <img class="col-md-6 col-lg-6" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{poster_path}}" alt="poster"/>
-    <p>{{overview}}</p>
-    <span>{{release_date}}</span>
-    <button type="button" class="btn btn-default col-md-offset-1 col-lg-offset-1">
-        <span class="glyphicon glyphicon-star" aria-hidden="false"></span>
-        <span>{{vote_average}}</span>
-    </button>
+    <div class="row">
+        <img class="col-xs-4 col-sm-3 col-md-3 col-lg-3" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{poster_path}}" alt="poster"/>
+        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <p >{{overview}}</p>
+            <p class="movie">Fecha de lanzamiento: {{release_date}}</p>
+                     
+            <div class="btn-toolbar" role="toolbar">
+                <button type="button" class="btn btn-default"> ❤ {{vote_average}} </button>
+            </div>
+         
+            <p> 
+            <input id="back" class="btn btn-primary col-lg-offset-4" type="button" value="Regresar" onClick="javascript:history.back();">
+            </p>  
+        </div>
+    </div>
 </section>

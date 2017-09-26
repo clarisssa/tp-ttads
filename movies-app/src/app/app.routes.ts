@@ -19,6 +19,9 @@ const routes: Routes = [
     { path: 'list-search',
     component: ListMoviesComponent,
     },
+    { path: 'top-list',
+    component: ListMoviesComponent,
+    },
     { path: '**',
     component: PageNotFoundComponent
     }

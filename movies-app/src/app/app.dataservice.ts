@@ -38,7 +38,7 @@ export class MovieDataService {
 
     topMovies(): Observable<any> {
       let listMovies: any;
-      listMovies = this.http.get('http://localhost:9000/api/movie/playing').map(res => res.json());
+      listMovies = this.http.get('http://localhost:9000/api/movies/playing').map(res => res.json());
       return listMovies;
     }
 

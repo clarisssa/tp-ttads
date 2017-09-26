@@ -1,10 +1,11 @@
-import {Component} from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 import { MovieComponent } from './app.movie.component';
 import { Observable } from 'rxjs/Observable';
-import {ListMoviesComponent} from './app.listmovies.component';
+import { ListMoviesComponent } from './app.listmovies.component';
 
+@Injectable()
 export class MovieDataService {
 
    constructor(public http: Http) {}
@@ -31,8 +32,7 @@ export class MovieDataService {
     }
 
     searchMovies(texto: string): Observable<any> {
-      let listMovies: any;
-      listMovies = this.http.get('http://localhost:9000/api/movies/search/' + texto).map(res => res.json());
+      const listMovies = this.http.get('http://localhost:9000/api/movies/search/' + texto).map(res => res.json());
       return listMovies;
     }
 

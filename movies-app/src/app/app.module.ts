@@ -31,7 +31,7 @@ import { FormsModule } from '@angular/forms';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [MovieDataService],
   bootstrap: [AppComponent]
 })
 

@@ -11,8 +11,8 @@ import { MovieDataService } from './app.dataservice';
 import { ListMoviesComponent} from './app.listmovies.component';
 import { PageNotFoundComponent } from './app.pagenotfound.component';
 import { AppRoutingModule} from './app.routes';
-import { NgModel } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { SearchListMoviesComponent } from './app.searchlistmovies.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +24,13 @@ import { FormsModule } from '@angular/forms';
     SearchComponent,
     ListMoviesComponent,
     PageNotFoundComponent,
-    NgModel
+    SearchListMoviesComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [MovieDataService],
   bootstrap: [AppComponent]

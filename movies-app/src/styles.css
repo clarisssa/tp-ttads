@@ -11,12 +11,14 @@
     }
 }
 
+@media (min-width: 768px) and (max-width: 992px){
+	.panel-footer{
+        height: 300px;
+    }
+}
+
 app-header { background: black;}
 
 app-body.col-md-12, app-header.col-md-12{
     padding: 0px;
 }
-
-
-
-

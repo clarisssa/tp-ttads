@@ -20,6 +20,12 @@ export class MovieComponent implements OnInit {
   public id ;
   public poster_path;
   public release_date: Date;
+  public language;
+  public tagline;
+  public genero;
+  public production_companies;
+  public production_countries;
+
   private sub: any;
 
   constructor(http: Http, private route: ActivatedRoute, private mds: MovieDataService) { }
@@ -30,4 +36,21 @@ export class MovieComponent implements OnInit {
       this.mds.getOneMovie(this.id, this);
     });
    }
+
+  votar() {
+     document.getElementById('voto').classList.remove('hidden');
+     document.getElementById('btnvotar').classList.add('hidden');
+     document.getElementById('agradecimiento').classList.add('hidden');
+  }
+
+  cancelar() {
+    document.getElementById('btnvotar').classList.remove('hidden');
+    document.getElementById('voto').classList.add('hidden');
+ }
+
+ agradecer() {
+  document.getElementById('btnvotar').classList.remove('hidden');
+  document.getElementById('voto').classList.add('hidden');
+  document.getElementById('agradecimiento').classList.remove('hidden');
+}
 }

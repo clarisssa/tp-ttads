@@ -26,6 +26,11 @@ export class MovieDataService {
                             oneMovie.vote_average = movie.vote_average;
                             oneMovie.poster_path = movie.poster_path;
                             oneMovie.release_date = movie.release_date;
+                            oneMovie.language = movie.spoken_languages[0].name;
+                            oneMovie.tagline = movie.tagline;
+                            oneMovie.genero = movie.genres[0].name;
+                            oneMovie.production_companies = movie.production_companies[0].name;
+                            oneMovie.production_countries = movie.production_countries[0].name;
                           }
                 );
       return oneMovie;
@@ -40,6 +45,10 @@ export class MovieDataService {
       let listMovies: any;
       listMovies = this.http.get('http://localhost:9000/api/movies/playing').map(res => res.json());
       return listMovies;
+    }
+
+    voteMovie(id: number, puntuacion: any): void {
+      this.http.post('http://localhost:9000/api/movies/review/' + id, puntuacion);
     }
 
    }

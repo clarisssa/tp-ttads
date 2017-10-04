@@ -1,18 +1,40 @@
 <section class="col-md-12 col-lg-12 movie">
     <h3>{{title}}</h3>
+    <h4><i>{{tagline}}</i></h4>
     <div class="row">
         <img class="col-xs-4 col-sm-3 col-md-3 col-lg-3" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{poster_path}}" alt="poster"/>
         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
             <p >{{overview}}</p>
-            <p class="movie">Fecha de lanzamiento: {{release_date}}</p>
-                     
+            <p class="movie"><b>Fecha de lanzamiento/Release date:</b> {{release_date}}</p>
+            <p><b>Género/Genre:</b> {{genero}}</p>
+            <p><b>Lenguaje/Language:</b> {{language}}</p>
+            <p><b>Compañía/Company:</b> {{production_companies}}</p>
+            <p><b>País/Country:</b> {{production_countries}}</p>
             <div class="btn-toolbar" role="toolbar">
-                <button type="button" class="btn btn-default"> ❤ {{vote_average}} </button>
+                <button type="button" id="btnvotar" class="btn" (click)='votar()'> ❤ {{vote_average}} </button>
+                <div id="voto" class="hidden">
+                    <div class="col-md-3 col-lg-3">
+                        <select class="form-control">
+                            <option value="">Seleccionar</option>
+                            <option value="10">10</option>
+                            <option value="9">9</option>
+                            <option value="8">8</option>
+                            <option value="7">7</option>
+                            <option value="6">6</option>
+                            <option value="5">5</option>
+                            <option value="4">4</option>
+                            <option value="3">3</option>
+                            <option value="2">2</option>
+                            <option value="1">1</option>
+                            <option value="0">0</option>                
+                        </select>
+                    </div>
+                    <button id="votar" type="button" class="btn btn-default" (click)='agradecer()'>Votar</button>
+                    <button type="button" class="btn btn-danger" (click)='cancelar()'>Cancelar</button>
+                </div>
+                <label id="agradecimiento" class="hidden">Su voto ha sido registrado. Gracias por votar!!!</label>
             </div>
-         
-            <p> 
-            <input id="back" class="btn btn-primary col-lg-offset-4" type="button" value="Regresar" onClick="javascript:history.back();">
-            </p>  
+            <input id="back" class="btn btn-primary pull-left" type="button" value="Regresar" onClick="javascript:history.back();">
         </div>
     </div>
 </section>

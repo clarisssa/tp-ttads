@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-searchlist',
-  templateUrl: './app.listmovies.component.html',
+  templateUrl: './app.searchlistmovies.component.html',
   styleUrls: ['./app.listmovies.component.css'],
 })
 

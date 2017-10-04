@@ -13,8 +13,9 @@
             <a class="navbar-brand hidden-sm hidden-md hidden-lg">Menú</a>
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="fullnav">
+                    <li><a href="#" [routerLink]="['list-search']" routerLinkActive="active">Buscar</a></li>
                     <li><a href="#">Películas</a></li>
-                    <li><a href="#" ng-click="topMovies()" [routerLink]="['top-list']" routerLinkActive="active">Estrenos</a></li>
+                    <li><a href="#" (click)="topMovies()" [routerLink]="['top-list']" routerLinkActive="active">Estrenos</a></li>
                     <li><a href="#">Series</a></li>
                 </ul>
             </div>

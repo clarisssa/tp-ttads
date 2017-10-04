@@ -23,9 +23,4 @@ export class SearchComponent {
     this.textChange.emit(this.texto);
   }
 
-  // searchMovie(): void {
-  //   this.emision();
-  //   // this.obs = this.mds.searchMovies(this.texto);
-  //   // this.obs.subscribe(response => this.listMovies = response.results);
-  //  }
 }

@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './app.pagenotfound.component';
 import { AppRoutingModule} from './app.routes';
 import { FormsModule } from '@angular/forms';
 import { SearchListMoviesComponent } from './app.searchlistmovies.component';
+import {TopMoviesComponent} from './app.topmovies.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SearchListMoviesComponent } from './app.searchlistmovies.component';
     SearchComponent,
     ListMoviesComponent,
     PageNotFoundComponent,
-    SearchListMoviesComponent
+    SearchListMoviesComponent,
+    TopMoviesComponent
   ],
   imports: [
     BrowserModule,

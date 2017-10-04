@@ -6,6 +6,7 @@ import { SearchComponent } from './app.search.component';
 import { NgModule } from '@angular/core';
 import { SearchListMoviesComponent } from './app.searchlistmovies.component';
 import {TopMoviesComponent} from './app.topmovies.component';
+import {SeriesComponent} from './app.series.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,9 @@ const routes: Routes = [
     },
     { path: 'top-list',
     component: TopMoviesComponent,
+    },
+    { path: 'series',
+    component: SeriesComponent,
     },
     { path: '**',
     component: PageNotFoundComponent

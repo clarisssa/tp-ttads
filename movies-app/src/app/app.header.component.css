@@ -43,3 +43,14 @@ fullnav{
     padding-left: 0;
     padding-right: 0;
 }
+
+    @media (max-width: 700px){
+       h1, h2{
+        font-size:20px;
+        }
+        }
+        @media (max-width: 400px){
+        h1, h2{
+        font-size:5px;
+        }
+        }

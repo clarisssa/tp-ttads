@@ -1,7 +1,7 @@
 div.header{
     background: #000000;
 }
-div#menu {float: right;}
+div#moviemenu {float: right;}
 div.logo{float: left;}
 div.navbar{
     border-color: black; 
@@ -43,3 +43,5 @@ fullnav{
     padding-left: 0;
     padding-right: 0;
 }
+
+ 

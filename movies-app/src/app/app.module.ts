@@ -14,6 +14,7 @@ import { AppRoutingModule} from './app.routes';
 import { FormsModule } from '@angular/forms';
 import { SearchListMoviesComponent } from './app.searchlistmovies.component';
 import {TopMoviesComponent} from './app.topmovies.component';
+import {SeriesComponent} from './app.series.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {TopMoviesComponent} from './app.topmovies.component';
     ListMoviesComponent,
     PageNotFoundComponent,
     SearchListMoviesComponent,
-    TopMoviesComponent
+    TopMoviesComponent,
+    SeriesComponent
   ],
   imports: [
     BrowserModule,

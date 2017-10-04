@@ -1,8 +1,8 @@
-<div class="header col-md-12 col-lg-12">
+<div class="header col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <div class="logo col-md-1 col-lg-1">
         <a href="index.html"><img src="assets/images/logothemoviedb.png" alt="logo themoviedb" /></a>
     </div>
-    <div id="menu" class="navbar-header col-md-11 col-lg-11">
+    <div id="moviemenu" class="navbar-header col-md-11 col-lg-11">
         <div class="navbar-inverse navbar-default">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
                 <span class="sr-only">Desplegar navegación</span>
@@ -11,12 +11,12 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand hidden-sm hidden-md hidden-lg">Menú</a>
-            <div class="collapse navbar-collapse" id="menu">
+            <div class="collapse navbar-collapse" id="moviemenu">
                 <ul class="fullnav">
                     <li><a href="#" [routerLink]="['list-search']" routerLinkActive="active">Buscar</a></li>
                     <li><a href="#">Películas</a></li>
-                    <li><a href="#" (click)="topMovies()" [routerLink]="['top-list']" routerLinkActive="active">Estrenos</a></li>
-                    <li><a href="#">Series</a></li>
+                    <li><a href="#" [routerLink]="['top-list']" routerLinkActive="active">Estrenos</a></li>
+                    <li><a href="#" [routerLink]="['series']" routerLinkActive="active" >Series</a></li>
                 </ul>
             </div>
         </div>

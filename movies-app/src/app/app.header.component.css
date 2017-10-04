@@ -1,7 +1,7 @@
 div.header{
     background: #000000;
 }
-div#menu {float: right;}
+div#moviemenu {float: right;}
 div.logo{float: left;}
 div.navbar{
     border-color: black; 
@@ -44,13 +44,4 @@ fullnav{
     padding-right: 0;
 }
 
-    @media (max-width: 700px){
-       h1, h2{
-        font-size:20px;
-        }
-        }
-        @media (max-width: 400px){
-        h1, h2{
-        font-size:5px;
-        }
-        }
+ 

@@ -4,6 +4,7 @@ import { ListMoviesComponent } from './app.listmovies.component';
 import { PageNotFoundComponent } from './app.pagenotfound.component';
 import { SearchComponent } from './app.search.component';
 import { NgModule } from '@angular/core';
+import { SearchListMoviesComponent } from './app.searchlistmovies.component';
 
 const routes: Routes = [
     { path: '',
@@ -17,7 +18,7 @@ const routes: Routes = [
       component: MovieComponent
     },
     { path: 'list-search',
-    component: ListMoviesComponent,
+    component: SearchListMoviesComponent,
     },
     { path: 'top-list',
     component: ListMoviesComponent,

@@ -19,4 +19,9 @@ input#back {
 }
 p {
     font-size:medium;
+    text-align: justify;
+}
+
+button {
+    background-color: yellowgreen;
 }

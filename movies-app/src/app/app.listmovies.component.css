@@ -1,3 +1,8 @@
 ul {list-style: none;}
-
 .fila { height: 460px;}
+p {text-align: justify;}
+h3 {text-align: center;}
+button {background-color: yellowgreen;}
+a:hover {text-decoration: none;}
+a:active {text-decoration: none;}
+a {color: seagreen;}

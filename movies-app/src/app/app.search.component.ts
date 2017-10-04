@@ -1,10 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Http } from '@angular/http';
 import { MovieDataService } from './app.dataservice';
 import { MovieComponent} from './app.movie.component';
-// import 'rxjs/add/operator/map';
-import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-search',
@@ -17,11 +15,17 @@ export class SearchComponent {
   public obs: Observable<any>;
   public listMovies: MovieComponent[] ;
   @Input() texto: string;
+  @Output() textChange = new EventEmitter<any>();
 
   constructor(http: Http, private mds: MovieDataService) { }
 
-  searchMovie(): void {
-    this.obs = this.mds.searchMovies(this.texto);
-    this.obs.subscribe(response => this.listMovies = response.results);
-   }
+  emision(): void {
+    this.textChange.emit(this.texto);
+  }
+
+  // searchMovie(): void {
+  //   this.emision();
+  //   // this.obs = this.mds.searchMovies(this.texto);
+  //   // this.obs.subscribe(response => this.listMovies = response.results);
+  //  }
 }
